@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HumanSimulation.HumanSimulationClasses.Human" Collapsed="true">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQCECBFAACCAAJEECCAAFhACALIAQEAAAIoIABFAA=</HashCode>
+      <FileName>HumanSimulationClasses\Human.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Female" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Female.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Male" Collapsed="true">
+    <Position X="2" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Male.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Diseases.Disease" Collapsed="true">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAAAACAAAgCAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Diseases\Disease.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Human" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Diseases.Ebola" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Diseases\Ebola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Diseases.Flu" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Diseases\Flu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Brain" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Organs\Brain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Ears" Collapsed="true">
+    <Position X="5.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Organs\Ears.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Eyes" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Organs\Eyes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Hands" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>HumanSimulationClasses\Organs\Hands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Mouth" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABEAAQAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Organs\Mouth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Organ" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAICAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>HumanSimulationClasses\Organs\Organ.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Human" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

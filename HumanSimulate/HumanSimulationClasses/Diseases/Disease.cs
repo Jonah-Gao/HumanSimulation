@@ -17,6 +17,14 @@ namespace HumanSimulation.HumanSimulationClasses.Diseases
         public double CFR { get; protected set; }
         public double IFR { get; protected set; }
 
+        public Human Human
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public double Pathogenesis(double Health)
         {
             return Health - CFR;

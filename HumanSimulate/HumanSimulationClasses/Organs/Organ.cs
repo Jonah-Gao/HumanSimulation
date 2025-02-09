@@ -12,6 +12,14 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
         public double Size { get; protected set; }
         public double Growth_Coef { get; protected set; } = 0;
 
+        public Human Human
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public abstract void Grow();
     }
 }

@@ -41,7 +41,7 @@ namespace HumanSimulation
                     case "THINK" when Person.Alive:
                         Console.Write("Question: ");
                         string question = Console.ReadLine() ?? string.Empty;
-                        Person.Think(question);
+                        Console.WriteLine(Person.Think(question));
                         break;
                     case "DAMAGE":
                         Console.Write("Amount: ");
