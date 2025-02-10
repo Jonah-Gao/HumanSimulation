@@ -11,17 +11,17 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
         public Hands(double Variance)
         {
             Size = 7.5d + Variance;
-            Growth_Coef = 0.05d;
+            GrowthCoef = 0.05d;
         }
 
-        public static string HandShake(Human target)
+        internal static string HandShake(Human person)
         {
-            return "Shaked hands with" + target.GetName();
+            return "Shaked hands with" + person.GetName();
         }
 
-        public override void Grow()
+        internal override void Grow()
         {
-            Size += Growth_Coef;
+            Size += GrowthCoef;
         }
     }
 }

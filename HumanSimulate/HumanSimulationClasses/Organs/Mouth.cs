@@ -12,15 +12,10 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
         public Mouth(double Variance)
         {
             Size = 3.5d + Variance;
-            Growth_Coef = 0.05d;
+            GrowthCoef = 0.05d;
         }
 
-        public void Growth()
-        {
-            Size += Growth_Coef;
-        }
-
-        public static string Speak(Dictionary<string, string> Knowledge)
+        internal static string Speak(Dictionary<string, string> Knowledge)
         {
             StringBuilder stringBuilder = new();
             foreach(KeyValuePair<string, string> element in Knowledge)
@@ -30,14 +25,14 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
             return stringBuilder.ToString();
         }
 
-        public static double Eat(double Calories)
+        internal static double Eat(double Calories)
         {
             return Calories * 0.9d;
         }
 
-        public override void Grow()
+        internal override void Grow()
         {
-            Size += Growth_Coef;
+            Size += GrowthCoef;
         }
     }
 }

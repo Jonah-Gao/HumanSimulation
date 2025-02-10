@@ -73,19 +73,16 @@
   <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Mouth" Collapsed="true">
     <Position X="6.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABEAAQAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABEAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>HumanSimulationClasses\Organs\Mouth.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumanSimulation.HumanSimulationClasses.Organs.Organ" Collapsed="true">
     <Position X="5.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAICAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <HashCode>ABAACAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>HumanSimulationClasses\Organs\Organ.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Human" />
-    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

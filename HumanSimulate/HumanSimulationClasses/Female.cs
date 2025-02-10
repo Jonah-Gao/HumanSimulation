@@ -26,7 +26,7 @@ namespace HumanSimulation.HumanSimulationClasses
                 foreach (var organ in Organs)
                 {
                     organ.Value.Grow();
-                    Saturation -= organ.Value.Growth_Coef;
+                    Saturation -= organ.Value.GrowthCoef;
                 }
                 if (Health != 0)
                 {

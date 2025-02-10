@@ -17,12 +17,12 @@ namespace HumanSimulation.HumanSimulationClasses.Diseases
         public double CFR { get; protected set; }
         public double IFR { get; protected set; }
 
-        public double Pathogenesis(double Health)
+        internal double Pathogenesis(double Health)
         {
             return Health - CFR;
         }
 
-        public void Damage(double damage)
+        internal void Damage(double damage)
         {
             Health -= damage;
         }

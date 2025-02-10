@@ -11,11 +11,11 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
     {
         public Eyes(double Variance)
         {
-            Growth_Coef = 0.001d;
+            GrowthCoef = 0.001d;
             Size = 1.7d + Variance;
         }
 
-        public static string ShuffleString(string input)
+        private static string ShuffleString(string input)
         {
             Random rand = new();
             char[] array = input.ToCharArray();
@@ -30,7 +30,7 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
             return new(array);
         }
 
-        public string[] Read(string input)
+        internal string[] Read(string input)
         {
             Random rand = new();
             string[] contents = input.Split(" <=> ");
@@ -44,9 +44,9 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
             return contents;
         }
 
-        public override void Grow()
+        internal override void Grow()
         {
-            Size += Growth_Coef;
+            Size += GrowthCoef;
         }
     }
 }

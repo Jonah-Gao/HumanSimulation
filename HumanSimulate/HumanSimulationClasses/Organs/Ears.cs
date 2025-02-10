@@ -11,11 +11,11 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
     {
         public Ears(double Variance)
         {
-            Growth_Coef = 0.01d;
+            GrowthCoef = 0.01d;
             Size = 4 + Variance;
         }
 
-        public static string ShuffleString(string input)
+        private static string ShuffleString(string input)
         {
             Random rand = new();
             char[] array = input.ToCharArray();
@@ -30,7 +30,7 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
             return new(array);
         }
 
-        public string[] Hear(string input)
+        internal string[] Hear(string input)
         {
             Random rand = new();
             string[] contents = input.Split(" <=> ");
@@ -44,9 +44,9 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
             return contents;
         }
 
-        public override void Grow()
+        internal override void Grow()
         {
-            Size += Growth_Coef;
+            Size += GrowthCoef;
         }
     }
 }

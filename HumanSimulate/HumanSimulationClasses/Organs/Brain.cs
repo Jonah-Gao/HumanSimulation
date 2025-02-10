@@ -11,16 +11,16 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
         public Brain(int _IQ, double Variance)
         {
             Size = 10d + Variance;
-            Growth_Coef = 0.6d;
+            GrowthCoef = 0.6d;
             IQ = _IQ;
         }
 
-        public double IQ { get; private set; }
-        public Dictionary<string, string> Knowledge { get; private set; } = [];
+        internal double IQ { get; private set; }
+        internal Dictionary<string, string> Knowledge { get; private set; } = [];
 
 
 
-        public string Compute(string input)
+        internal string Compute(string input)
         {
             // Implementation here
             Random rnd = new();
@@ -31,15 +31,15 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
             return $"{input} ≠ {input}";
         }
 
-        public void Learn(string name, string description)
+        internal void Learn(string name, string description)
         {
             Knowledge[name] = description;
         }
 
-        public override void Grow()
+        internal override void Grow()
         {
-            IQ += Growth_Coef / 10d;
-            Size += Growth_Coef / 10d;
+            IQ += GrowthCoef / 10d;
+            Size += GrowthCoef / 10d;
         }
     }
 }
