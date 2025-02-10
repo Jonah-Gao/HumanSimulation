@@ -39,7 +39,7 @@ namespace HumanSimulation.HumanSimulationClasses
         protected List<Disease> Diseases { get; set; }
         protected Dictionary<string, Organ> Organs { get; set; }
 
-        public double UpdateAge()
+        private double UpdateAge()
         {
             DateTime today = DateTime.Now;
             int age = today.Year - Birthday.Year;
@@ -118,7 +118,7 @@ namespace HumanSimulation.HumanSimulationClasses
             }
         }
 
-        public void ImmuneSystem()
+        protected void ImmuneSystem()
         {
             for (int i = 0; i < Diseases.Count; i++)
             {

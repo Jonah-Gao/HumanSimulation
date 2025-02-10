@@ -24,7 +24,7 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
         {
             // Implementation here
             Random rnd = new();
-            if (rnd.Next(0, (int)IQ + 10) <= IQ)
+            if (rnd.Next(0, (int)Math.Pow(2, IQ/10d) + 100) <= (int)Math.Pow(2, IQ / 10d))
             {
                 return $"{input} = {input}";
             }

@@ -8,7 +8,7 @@ namespace HumanSimulation
     {
         static async Task Main(string[] args)
         {
-            Male Person = new("Andrew", "Harrison", DateTime.Now, 5);
+            Male Person = new("Andrew", "Harrison", DateTime.Now, 14);
             Task.Run(() => Human(Person));
             string input = string.Empty;
             Console.WriteLine("Commands:\n-Status\n-Hear\n-Look\n-Speak\n-Eat\n-Think\n-Infect\n-Damage(Dev)");
