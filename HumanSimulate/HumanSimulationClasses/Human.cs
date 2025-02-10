@@ -1,11 +1,5 @@
 ﻿using HumanSimulation.HumanSimulationClasses.Diseases;
 using HumanSimulation.HumanSimulationClasses.Organs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Cache;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HumanSimulation.HumanSimulationClasses
 {
@@ -20,8 +14,14 @@ namespace HumanSimulation.HumanSimulationClasses
             Saturation = 100d;
             MetabolismRate = 1d;
             Health = 100d;
-            (Brain, Ears, Eyes, Hands, Mouth) = (new(rnd.Next(90, 160), rnd.Next(-1, 1)), new(rnd.Next(-5, 5) / 5d), new(rnd.Next(-1, 1) / 10d), new(rnd.Next(-5, 5) / 10d), new(rnd.Next(-7, 7) / 10d));
-            Organs = [Brain, Ears, Eyes, Hands, Mouth];
+            Organs = new()
+            {
+                { "Brain", new Brain(rnd.Next(60, 161), rnd.NextDouble() * 2 - 1) },
+                { "Ears", new Ears((rnd.Next(-5, 6)) / 5d) },
+                { "Eyes", new Eyes((rnd.Next(-10, 11)) / 10d) },
+                { "Hands", new Hands((rnd.Next(-5, 6)) / 10d) },
+                { "Mouth", new Mouth((rnd.Next(-7, 8)) / 10d) }
+            };
             Diseases = [];
         }
 
@@ -37,12 +37,7 @@ namespace HumanSimulation.HumanSimulationClasses
         public double Immunity { get; protected set; }
         public bool Alive { get; protected set; } = true;
         protected List<Disease> Diseases { get; set; }
-        protected Brain Brain { get; set; }
-        protected Ears Ears { get; set; }
-        protected Eyes Eyes { get; set; }
-        protected Hands Hands { get; set; }
-        protected Mouth Mouth { get; set; }
-        protected List<Organ> Organs { get; set; }
+        protected Dictionary<string, Organ> Organs { get; set; }
 
         public double UpdateAge()
         {
@@ -62,7 +57,7 @@ namespace HumanSimulation.HumanSimulationClasses
 
         public double GetIQ()
         {
-            return Brain.IQ;
+            return ((Brain)Organs["Brain"]).IQ;
         }
 
         public string GetDiseases()
@@ -73,7 +68,7 @@ namespace HumanSimulation.HumanSimulationClasses
         public string Think(string input)
         {
             Saturation -= MetabolismRate;
-            return Brain.Compute(input);
+            return ((Brain)Organs["Brain"]).Compute(input);
         }
 
         public void Eat(double Calories)
@@ -83,24 +78,24 @@ namespace HumanSimulation.HumanSimulationClasses
 
         public void Speak()
         {
-            Console.WriteLine(Mouth.Speak(Brain.Knowledge));
+            Console.WriteLine(Mouth.Speak(((Brain)Organs["Brain"]).Knowledge));
         }
 
         public void Hear(string sound)
         {
-            string[] contents = Ears.Hear(sound);
+            string[] contents = ((Ears)Organs["Ears"]).Hear(sound);
             for (int i = 0; i < contents.Length; i += 2)
             {
-                Brain.Learn(contents[i], contents[i + 1]);
+                ((Brain)Organs["Brain"]).Learn(contents[i], contents[i + 1]);
             }
         }
 
         public void Read(string text)
         {
-            string[] contents = Eyes.Read(text);
+            string[] contents = ((Eyes)Organs["Eyes"]).Read(text);
             for (int i = 0; i < contents.Length; i += 2)
             {
-                Brain.Learn(contents[i], contents[i + 1]);
+                ((Brain)Organs["Brain"]).Learn(contents[i], contents[i + 1]);
             }
         }
 
@@ -169,9 +164,9 @@ namespace HumanSimulation.HumanSimulationClasses
         public void Damage(double amount)
         {
             Health -= amount;
-            foreach (Organ organ in Organs)
+            foreach (var organ in Organs)
             {
-                organ.Health -= amount;
+                organ.Value.Health -= amount;
             }
         }
     }

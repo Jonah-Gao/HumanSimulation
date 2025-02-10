@@ -3,7 +3,7 @@
   <Class Name="HumanSimulation.HumanSimulationClasses.Human" Collapsed="true">
     <Position X="5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQCECBFAACCAAJEECCAAFhACALIAQEAAAIoIABFAA=</HashCode>
+      <HashCode>AAAQCECBFAACAAAJAECCAAFhACAJIAQAAAAIoAABFAA=</HashCode>
       <FileName>HumanSimulationClasses\Human.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,12 +24,9 @@
   <Class Name="HumanSimulation.HumanSimulationClasses.Diseases.Disease" Collapsed="true">
     <Position X="9.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACACAAAAAAAACAAAgCAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <HashCode>AAAACACAAAAAAAACAAAgCAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>HumanSimulationClasses\Diseases\Disease.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Human" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="HumanSimulation.HumanSimulationClasses.Diseases.Ebola" Collapsed="true">
     <Position X="10.5" Y="1.5" Width="1.5" />

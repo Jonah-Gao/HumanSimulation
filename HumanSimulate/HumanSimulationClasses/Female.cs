@@ -23,10 +23,10 @@ namespace HumanSimulation.HumanSimulationClasses
                 Saturation -= MetabolismRate * 0.1d;
                 Height += MetabolismRate * 0.01d;
                 Weight += MetabolismRate * 0.01d;
-                foreach (Organ organ in Organs)
+                foreach (var organ in Organs)
                 {
-                    organ.Grow();
-                    Saturation -= organ.Growth_Coef;
+                    organ.Value.Grow();
+                    Saturation -= organ.Value.Growth_Coef;
                 }
                 if (Health != 0)
                 {

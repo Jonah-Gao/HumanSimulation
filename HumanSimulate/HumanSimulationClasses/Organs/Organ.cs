@@ -15,6 +15,7 @@ namespace HumanSimulation.HumanSimulationClasses.Organs
         public Human Human
         {
             get => default;
+
             set
             {
             }
